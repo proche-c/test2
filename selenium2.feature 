@@ -1,0 +1,13 @@
+
+
+Feature: check title several webs
+
+  Scenario Outline: run a test on several websites
+     Given I write "<web>" on the browser
+      When I look up the title
+      Then I get <title>
+
+  Examples: 
+   | web                             | title            |
+   | https://profile.intra.42.fr     | Intra Signin New |
+   | https://www.apple.com/es/       | Apple (España)   |
